@@ -1,9 +1,9 @@
 import warnings
-
-warnings.filterwarnings("ignore")
 from model_saving import load_model
 from rolling_eval import rolling_window_complete
 import pandas as pd
+
+warnings.filterwarnings("ignore")
 
 model_rf = load_model("random_forest_model")
 model_xgb = load_model("xgboost_model")
