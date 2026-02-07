@@ -1,5 +1,4 @@
 from sklearn.metrics import mean_squared_error
-import optuna
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -118,10 +117,6 @@ def objective_rf(trial, X_train, y_train, X_val, y_val):
     y_val_pred = model.predict(X_val)
     val_rmse = mean_squared_error(y_val, y_val_pred) ** 0.5
     return val_rmse
-
-
-study_rf = optuna.create_study(direction="minimize")
-study_rf.optimize(objective_rf, n_trials=200, show_progress_bar=True)
 
 
 def objective_xgboost(trial, X_train, y_train, X_val, y_val):

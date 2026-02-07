@@ -114,13 +114,15 @@ Adapted example (update to match your actual layout):
 │   ├── data_prep.py      # Loading, Chow–Lin, EM imputation, transformations
 │   ├── models_linear.py  # ARIMA / ARMAX / SARIMAX, Ridge, Lasso, Elastic Net
 │   ├── models_nonlinear.py
+|   ├── model_saving.py 
 │   ├── factor_model.py   # DFM construction and DFM + Ridge
 │   ├── rolling_eval.py   # Rolling‑window forecasting and evaluation
 │   └── plots.py          # Tables and figures (MAE/RMSE, win rates, etc.)
-├── notebooks/
-│   └── *.ipynb           # Exploration and additional analysis
 ├── outputs/
-│   ├── figures/          # Reproduced figures and rolling‑window plots
-│   └── tables/           # Exported performance tables
+│   └── todo           # plot models performance 
+├── models/
+│   ├── neural_network_model.pkl    # Neural Network Mode savec
+│   |── random_forest_model.pkl #RandomForest model saved
+|   └── xgboost_model.pkl #Xgboost model saved
 ├── requirements.txt
 └── README.md
